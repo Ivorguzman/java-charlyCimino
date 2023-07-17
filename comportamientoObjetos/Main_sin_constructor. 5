@@ -1,0 +1,29 @@
+package comportamientoObjetos;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		CuentaBancaria cb = new CuentaBancaria();
+		CuentaBancaria cb2 = new CuentaBancaria();
+		CuentaBancaria cb3 = new CuentaBancaria();
+
+		cb.setAlias("miAlias");
+		cb.setMoneda("peseos");
+		cb.setTipo("Caja de ahorro");
+
+		cb2.setAlias("caja2");
+		cb2.setMoneda("Dólares");
+		cb2.setTipo("Cuenta corriente");
+
+		cb3.setAlias("cuenta_123");
+		cb3.setMoneda("Pesos");
+		cb3.setTipo("Cuenta corriente");
+
+		cb.mostrarDatos();
+		cb2.mostrarDatos();
+		cb3.mostrarDatos();
+
+	}
+
+}

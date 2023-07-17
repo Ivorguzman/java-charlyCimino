@@ -1,0 +1,93 @@
+package comportamientoObjetos;
+
+/**
+ * @author Alexander
+ *
+ */
+public class CuentaBancaria {
+
+	String CBU;
+	String alias;
+	double saldo;
+	private String moneda;
+	private String tipo;
+
+
+	double obtenerSaldo() {
+		System.out.print("Saldo Disponible  : ==> ");
+		return this.saldo; // metodo que debuelve algo distinto de void
+}
+
+// GETERS Y SETTERS
+
+public String getAlias() {
+	return this.alias;
+}
+
+public double getSaldo() {
+	return this.saldo;
+}
+
+public void setMoneda(String moneda) {
+	System.out.println(this + " ==> this setMoneda");
+	if (moneda != null) {
+		this.moneda = moneda;
+	}
+}
+
+public void setTipo(String tipo) {
+	System.out.println(this + " ==> this setTipo");
+	if (tipo != null) {
+
+		this.tipo = tipo;
+	}
+}
+
+public void setAlias(String alias) {
+	System.out.println(this + " ==> this setAlias");
+	if (alias != null) {
+		this.alias = alias;
+	}
+}
+
+
+
+// metodo que recibe un parametro No devuelve resultado
+void depositar(double monto) { // Ojo
+
+	if (monto > 0) {
+		System.out.println("Monto a depositar : " + monto);
+		System.out.print("Salado despues de depositar  : ");
+		System.out.print(this.saldo += monto);
+	} else {
+		System.out.println("Monto a depositar : " + monto);
+		System.out.println("Moto del deposito debe ser mayor a 0 - ERROR: ==> " + monto);
+	};
+}
+
+
+
+//metodo que recibe  un parametro y devuelve resultado
+boolean saldoDisponible(double monto) { // Ojo
+	return this.saldo >= monto; // true o false Nos se necesita de un if else, ternario o logo porel estilo ;
+}
+
+
+
+
+//***_1 REUTILIZANDO CODIGO:
+void extraer(double monto) { // Ojo
+	if (this.saldoDisponible(monto)) {// REUTILIZANDO EL METODO  saldoDisponible(monto)
+		System.out.println("Efectivo retirado : ==> " + monto);
+		System.out.print("Saldo Disponible  : ==> ");
+		System.out.print(this.saldo -= monto);
+
+	} else {
+		System.out.println("Monto a retirar ==> " + monto);
+		System.out.println("Saldo Disponible  : ==> " + this.saldo + "  ERROR: Saldo Insuficiente ");
+	}
+
+}
+
+
+};
