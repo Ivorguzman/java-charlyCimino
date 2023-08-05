@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>343</x>
+      <y>175</y>
+      <w>196</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>usodependencias::Documento
+--
+-titulo: String
+-cuerpo: String
+--
++Documento(String titulo, String cuerpo): ctor
++getTitulo(): String
++getCuerpo(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>182</y>
+      <w>189</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>usodependencias::Impresora
+--
++estaEncendida: boolean
+--
++setEstadoDeLaImpresora(): void
++encender(): void
++imprimir(Documento documento ): void
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>63</y>
+      <w>126</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>usodependencias::Principal
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>301</x>
+      <y>105</y>
+      <w>133</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>170.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>175</x>
+      <y>105</y>
+      <w>133</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;110.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>245</x>
+      <y>224</y>
+      <w>112</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
