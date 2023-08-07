@@ -1,0 +1,84 @@
+package tel_don_ask;
+
+
+	public class Motor {
+		// VARIAVLES DE CLASE ( Atributos )
+		private String numero;
+		private double litros;
+		private String tipo;
+		private int rpmActuales;
+
+
+
+
+		/**
+		 * CONSTRUCTOR
+		 * @author Alexander
+		 * @param numero
+		 * @param litros
+		 * @param tipo
+		 */
+		public Motor(String numero, double litros, String tipo) {
+			this.numero = numero;
+			this.litros = litros;
+			this.tipo = tipo;
+			this.rpmActuales = 0;
+		}
+
+
+
+
+
+
+		@Override public String toString() {
+			return "Motor [numero=" + this.numero + ", litros=" + this.litros + ", tipo=" + this.tipo + ", rpmActuales="
+					+ this.rpmActuales + "]";
+		}
+
+
+
+
+
+
+		public double getLitros() {
+			return this.litros;
+		}
+
+
+		public void setLitros(double litros, String numero) {
+			if (litros != 1.3 && litros != 1.6 && litros != 2.3 && litros != 3.0 && litros != 4.0) {
+				throw new IllegalArgumentException(" ERROR : Litros aceptados = 1.3 | 1.6 | 2.3 | 3.0 | 4.0 | ");
+			}
+			if (numero == "" || numero == null) {
+				throw new IllegalArgumentException(" ERROR: Indique serial del Motor");
+			}
+			this.litros = litros;
+			this.numero = numero;
+		}
+
+
+		/*
+		 * // Codigo mal diseñado de baja calidad public void setRpmActuales(int
+		 * rpmActuales) {
+		 * 
+		 * if (rpmActuales < 0 || rpmActuales > 3000) { throw new
+		 * IllegalArgumentException(" ERROR: Motor revoluciones  imcorrectas"); }
+		 * this.rpmActuales = rpmActuales;
+		 * }
+		 * 
+		 * public int getRpmActuales() { return this.rpmActuales; }
+		 */
+
+
+		// Codigo Bien realizado de buena calidad.
+		public void acelerar() {
+
+			this.rpmActuales += 1000;
+		}
+
+		
+
+
+	}
+
+
