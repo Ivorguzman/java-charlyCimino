@@ -42,6 +42,9 @@ public class Principal {
 		auto.acelerar();
 		System.out.println(auto);
 
+		auto.acelerar();
+		System.out.println(auto);
+
 
 
 	}
